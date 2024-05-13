@@ -1,9 +1,19 @@
 pipeline {
-    agent any // where to execute
+    agent any
     stages {
         stage('Build') {
             steps {
-                bat 'python fac.py'
+                echo 'Allication build stage...' 
+        }
+       }
+        stage('Test') {
+            steps {
+                echo 'Allication test stage' 
+        }
+        }
+        stage('Run') {
+            steps {
+                echo 'Allication run stage' 
             }
         }
     }
